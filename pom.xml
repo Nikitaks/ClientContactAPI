@@ -12,7 +12,7 @@
 	<artifactId>ClientContactAPI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ClientContactAPI</name>
-	<description>Clients Contacts Database project for test task by Corporativnye Kommunikacii</description>
+	<description></description>
 	<properties>
 		<java.version>1.8</java.version>
 		<lombok.version>1.18.30</lombok.version>
