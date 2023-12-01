@@ -1,11 +1,16 @@
 package com.ClientContactAPI.entity;
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
-@Data @NoArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "CONTACTS")
 public class Contact {
@@ -13,20 +18,13 @@ public class Contact {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID")
     private long id;
+
 	@Column(name = "CLIENT_ID")
     private long clientId;
 
     @Column(name = "CONTACT_TYPE_ID")
 	@Enumerated(EnumType.ORDINAL)
     private ContactType contactType;
+
     private String contact;
-    
-	public Contact(long id, long clientId, ContactType contactType, String contact) {
-		super();
-		this.id = id;
-		this.clientId = clientId;
-		this.contactType = contactType;
-		this.contact = contact;
-	}
-    
 }
